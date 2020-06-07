@@ -40,6 +40,10 @@
 }
 .slideCounter {
   position: absolute;
-top: 0;
-right: 0;
+  top: 0;
+  right: 0;
+}
+.content-onlyImage {
+  max-width: 70vw;
+  max-height: 60vh;
 }

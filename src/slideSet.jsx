@@ -56,7 +56,7 @@ const slideSet = [{
 {
     title: "How - Effects",
     content: (
-        <img src={preCustomHook}/>
+        <img className="content-onlyImage" src={preCustomHook}/>
     )
 },
 {
