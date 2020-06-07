@@ -8,6 +8,9 @@ import localState from "./assets/local state.png"
 import classComponent from "./assets/class component.png"
 import contextProvider from "./assets/contextProvider.png"
 import contextConsumer from "./assets/contextConsumer.png"
+import customHook from "./assets/customHook.png"
+import preCustomHook from "./assets/preCustomHook.png"
+import useCustomHook from "./assets/useCustomHook.png"
 import useArrowCounter from "./useArrowCounter";
 import {Counter} from "./examples"
 
@@ -45,9 +48,7 @@ const slideSet = [{
     title: "How - Local state",
     content: (
         <ComparisonContent
-        case={<>
-            <img src={localState}/>
-        </>}
+        case={<img src={localState} />}
         counterCase={<div className={"buttonWrapper"}><Counter/></div>}
         />
     )
@@ -55,21 +56,14 @@ const slideSet = [{
 {
     title: "How - Effects",
     content: (
-        <ComparisonContent
-        case={<>
-            <img src={localState}/>
-        </>}
-        counterCase={<div className={"buttonWrapper"}><Counter/></div>}
-        />
+        <img src={preCustomHook}/>
     )
 },
 {
     title: "How - Context",
     content: (
         <ComparisonContent
-        case={<>
-            <img src={contextProvider}/>
-        </>}
+        case={<img src={contextProvider}/>}
         counterCase={<img src={contextConsumer}/>}
         />
     )
@@ -77,10 +71,8 @@ const slideSet = [{
     title: "How - Custom hooks",
     content: (
         <ComparisonContent
-        case={<>
-            <img src={localState}/>
-        </>}
-        counterCase={<div className={"buttonWrapper"}><Counter/></div>}
+        case={<img src={preCustomHook}/>}
+        counterCase={<><img src={customHook}/><img src={useCustomHook}/></>}
         />
     )
 }
