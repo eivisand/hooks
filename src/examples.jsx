@@ -64,23 +64,25 @@ function pickRandomColor() {
     return colors[Math.floor(Math.random() * 4)]
 }
 
-export const OuterMutatingComponent = React.memo((props) => {
+export function OuterMutatingComponent(props) {
     const [color, setColor] = useState(pickRandomColor())
     return (
         <div className="colorCircle" style={{backgroundColor: color}}>
             <InnerComponent functionProp={() => setColor(pickRandomColor())} />
         </div>
         )
-})
-export const OuterComponent = React.memo((props) => {
+}
+
+export function OuterComponent(props) {
     const [color, setColor] = useState(pickRandomColor())
-    const setRandomColor = useCallback(() => setColor(pickRandomColor()), [setColor])
+    const setRandomColor = useCallback(() => setColor(pickRandomColor()), [])
     return (
         <div className="colorCircle" style={{backgroundColor: color}}>
             <InnerComponent functionProp={setRandomColor} />
         </div>
     );
-})
+}
+
 const InnerComponent = React.memo((props) => {
     const renderCount = useRef(-1)
     renderCount.current = renderCount.current+1;

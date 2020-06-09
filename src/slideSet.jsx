@@ -13,6 +13,8 @@ import preCustomHook from "./assets/preCustomHook.png"
 import useCustomHook from "./assets/useCustomHook.png"
 import renderFunction from "./assets/renderFunction.png"
 import dependencies from "./assets/dependencies.png"
+import outer from "./assets/outer.png"
+import outerMutating from "./assets/outerMutating.png"
 import useArrowCounter from "./useArrowCounter";
 import {Counter, OuterMutatingComponent, OuterComponent} from "./examples"
 
@@ -74,8 +76,8 @@ const slideSet = [{
     title: "How - Memoized values",
     content: (
         <ComparisonContent
-        case={<OuterMutatingComponent/>}
-        counterCase={<OuterComponent/>}
+        case={<><img src={outerMutating}/><OuterMutatingComponent/></>}
+        counterCase={<><img src={outer}/><OuterComponent/></>}
         />
     )
 },
@@ -113,6 +115,5 @@ function SlideSet(props) {
         <Slide {...slideSet[currentSlide]} />
     </SlideSetContext.Provider>)
 }
-
 
 export default SlideSet;
