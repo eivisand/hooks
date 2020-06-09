@@ -1,4 +1,4 @@
-import React, { createContext } from "react"
+import React, { createContext, useState, useCallback, useRef } from "react"
 import Slide from "./slide";
 import ComparisonContent from "./ComparisonContent";
 import thisthat from "./assets/thisthat.png"
@@ -11,8 +11,10 @@ import contextConsumer from "./assets/contextConsumer.png"
 import customHook from "./assets/customHook.png"
 import preCustomHook from "./assets/preCustomHook.png"
 import useCustomHook from "./assets/useCustomHook.png"
+import renderFunction from "./assets/renderFunction.png"
+import dependencies from "./assets/dependencies.png"
 import useArrowCounter from "./useArrowCounter";
-import {Counter} from "./examples"
+import {Counter, OuterMutatingComponent, OuterComponent} from "./examples"
 
 const slideSet = [{
     title: "A guide to hooking",
@@ -67,13 +69,35 @@ const slideSet = [{
         counterCase={<img src={contextConsumer}/>}
         />
     )
-},{
+},
+{
+    title: "How - Memoized values",
+    content: (
+        <ComparisonContent
+        case={<OuterMutatingComponent/>}
+        counterCase={<OuterComponent/>}
+        />
+    )
+},
+{
     title: "How - Custom hooks",
     content: (
         <ComparisonContent
         case={<img src={preCustomHook}/>}
         counterCase={<><img src={customHook}/><img src={useCustomHook}/></>}
         />
+    )
+},
+{
+    title: "Pitfalls - React in general",
+    content: (
+        <img className="content-onlyImage" src={renderFunction}/>
+    )
+},
+{
+    title: "Pitfalls - Dependencies",
+    content: (
+        <img className="content-onlyImage" src={dependencies}/>
     )
 }
 ]
@@ -89,5 +113,6 @@ function SlideSet(props) {
         <Slide {...slideSet[currentSlide]} />
     </SlideSetContext.Provider>)
 }
+
 
 export default SlideSet;
