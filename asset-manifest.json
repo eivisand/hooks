@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/hooks/static/css/main.ccc0ca4f.chunk.css",
+    "main.js": "/hooks/static/js/main.f34bd1bd.chunk.js",
+    "main.js.map": "/hooks/static/js/main.f34bd1bd.chunk.js.map",
+    "runtime-main.js": "/hooks/static/js/runtime-main.846bf6ec.js",
+    "runtime-main.js.map": "/hooks/static/js/runtime-main.846bf6ec.js.map",
+    "static/js/2.8f218618.chunk.js": "/hooks/static/js/2.8f218618.chunk.js",
+    "static/js/2.8f218618.chunk.js.map": "/hooks/static/js/2.8f218618.chunk.js.map",
+    "index.html": "/hooks/index.html",
+    "precache-manifest.0aa57d2690074bfb722ed332648aa980.js": "/hooks/precache-manifest.0aa57d2690074bfb722ed332648aa980.js",
+    "service-worker.js": "/hooks/service-worker.js",
+    "static/css/main.ccc0ca4f.chunk.css.map": "/hooks/static/css/main.ccc0ca4f.chunk.css.map",
+    "static/js/2.8f218618.chunk.js.LICENSE.txt": "/hooks/static/js/2.8f218618.chunk.js.LICENSE.txt",
+    "static/media/class component.png": "/hooks/static/media/class component.f69854c0.png",
+    "static/media/contextConsumer.png": "/hooks/static/media/contextConsumer.bfebbb01.png",
+    "static/media/contextProvider.png": "/hooks/static/media/contextProvider.6b99c6c3.png",
+    "static/media/customHook.png": "/hooks/static/media/customHook.c823c8c0.png",
+    "static/media/dependencies.png": "/hooks/static/media/dependencies.b0fbd051.png",
+    "static/media/functional component.png": "/hooks/static/media/functional component.d38d6e5b.png",
+    "static/media/local state.png": "/hooks/static/media/local state.b4a27207.png",
+    "static/media/outer.png": "/hooks/static/media/outer.d652f4ff.png",
+    "static/media/outerMutating.png": "/hooks/static/media/outerMutating.cf8ddf11.png",
+    "static/media/preCustomHook.png": "/hooks/static/media/preCustomHook.7cb5adff.png",
+    "static/media/renderFunction.png": "/hooks/static/media/renderFunction.e115158e.png",
+    "static/media/reuseStateLogic.png": "/hooks/static/media/reuseStateLogic.9a3a6ab7.png",
+    "static/media/thisthat.png": "/hooks/static/media/thisthat.d9ec18f6.png",
+    "static/media/thisthisthis.png": "/hooks/static/media/thisthisthis.002a419c.png",
+    "static/media/unReusableStateLogic.png": "/hooks/static/media/unReusableStateLogic.a6565e1d.png",
+    "static/media/useContext.png": "/hooks/static/media/useContext.e3b116e6.png",
+    "static/media/useCustomHook.png": "/hooks/static/media/useCustomHook.62f00645.png",
+    "static/media/useMemoized.png": "/hooks/static/media/useMemoized.51f155a5.png",
+    "static/media/useRef.png": "/hooks/static/media/useRef.30fba856.png",
+    "static/media/useRefComponent.png": "/hooks/static/media/useRefComponent.ac19f779.png",
+    "static/media/useState.png": "/hooks/static/media/useState.29151fb1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.846bf6ec.js",
+    "static/js/2.8f218618.chunk.js",
+    "static/css/main.ccc0ca4f.chunk.css",
+    "static/js/main.f34bd1bd.chunk.js"
+  ]
+}
