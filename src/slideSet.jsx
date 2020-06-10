@@ -21,8 +21,10 @@ import useStateImg from "./assets/useState.png"
 import useEffectImg from "./assets/useEffect.png"
 import useContextImg from "./assets/useContext.png"
 import useMemoizedImg from "./assets/useMemoized.png"
+import useRefComponent from "./assets/useRefComponent.png"
+import useRefImg from "./assets/useRef.png"
 import useArrowCounter from "./useArrowCounter";
-import {Counter, OuterMutatingComponent, OuterComponent} from "./examples"
+import {Counter, OuterMutatingComponent, OuterComponent, TextInputWithFocusButton} from "./examples"
 
 const slideSet = [{
     title: "A guide to hooking",
@@ -103,6 +105,18 @@ const slideSet = [{
     )
 },
 {
+    title: "How - Mutable values",
+    content: (
+        <>
+        <img className="subHeaderImg" src={useRefImg}/>
+        <ComparisonContent
+        case={<img src={useRefComponent}/>}
+        counterCase={<TextInputWithFocusButton/>}
+        />
+        </>
+    )
+},
+{
     title: "How - Custom hooks",
     content: (
         <ComparisonContent
@@ -121,6 +135,14 @@ const slideSet = [{
     title: "Pitfalls - Dependencies",
     content: (
         <img className="content-onlyImage" src={dependencies}/>
+    )
+},
+{
+    title: "Get hooked",
+    content: (
+        <>
+            <p><a href="https://reactjs.org/docs/hooks-reference.html">Hooks Api Reference</a></p>
+        </>
     )
 }
 ]

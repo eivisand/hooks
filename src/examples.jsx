@@ -126,7 +126,30 @@ export function OuterComponent(props) {
 }
 
 const InnerComponent = React.memo((props) => {
-    const renderCount = useRef(-1)
+    const renderCount = useRef(0)
     renderCount.current = renderCount.current + 1;
     return <button onClick={props.functionProp}>Inner component rendered: {renderCount.current}</button>
 })
+
+export function RefComponent(props) {
+    const clickCount = useRef(0)
+    
+    return (<button onClick={
+        () => clickCount.current = clickCount.current + 1}>
+            I've been clicked {clickCount.current} times
+        </button>)
+}
+
+export function TextInputWithFocusButton() {
+    const inputEl = useRef(null);
+    const onButtonClick = () => {
+      // `current` points to the mounted text input element
+      inputEl.current.focus();
+    };
+    return (
+      <>
+        <input ref={inputEl} type="text" />
+        <button onClick={onButtonClick}>Focus the input</button>
+      </>
+    );
+  }
