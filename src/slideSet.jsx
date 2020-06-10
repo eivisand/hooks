@@ -15,6 +15,9 @@ import renderFunction from "./assets/renderFunction.png"
 import dependencies from "./assets/dependencies.png"
 import outer from "./assets/outer.png"
 import outerMutating from "./assets/outerMutating.png"
+import reuseStatefulLogic from "./assets/reuseStateLogic.png"
+import noReuseStatefulLogic from "./assets/unReusableStateLogic.png"
+//import outerMutating from "./assets/outerMutating.png"
 import useArrowCounter from "./useArrowCounter";
 import {Counter, OuterMutatingComponent, OuterComponent} from "./examples"
 
@@ -38,7 +41,10 @@ const slideSet = [{
 },
 {
     title: "Why - Reuse stateful logic",
-    content: null,
+    content: (<ComparisonContent
+        case={<img src={noReuseStatefulLogic} />}
+        counterCase={<img src={reuseStatefulLogic}/>}
+    />),
 
 },
 {

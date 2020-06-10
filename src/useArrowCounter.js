@@ -1,7 +1,6 @@
 import {useEffect, useReducer} from 'react'
 
 function currentCountReducer(currentSlideIndex, keyPressEvent) {
-    console.log(keyPressEvent)
     switch (keyPressEvent.code){
         case "ArrowRight":
             return currentSlideIndex + 1;

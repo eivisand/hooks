@@ -1,16 +1,43 @@
 import React, {useState, useEffect, useCallback, useRef} from 'react'
 
+const someEvent = null;
+function addSomeEventHandler(){};
+
 class ComplexComponent extends React.Component {
     constructor(props) {
         super(props)
-        this.eventHandler = this.eventHandler.bind(this)
+        this.state = {
+            someState: "someState"
+        }
+
     }
-    eventHandler(event){
+    componentDidMount(){
         // do something
+        addSomeEventHandler(someEvent, 
+            () => this.setState({someState: "someState"}))
     }
     render() {
-        return <button onClick={this.eventHandler}></button>
+        return <span>{this.state.someState}</span>
     }
+}
+
+function useCommonPattern(initialState) {
+    const [someState, setSomeState] = useState("someState");
+    
+    useEffect(() => {
+        // do something
+        setSomeState("someNewState")
+        return () => {
+            // do some cleanup
+        }
+    }, [/*dependencies*/])
+
+    return someState
+}
+
+function ReusingFunctionalComponent(props) {
+    const someState = useCommonPattern("someState")
+    return <span>{this.state.someState}</span>
 }
 
 function ComplexFunctionalComponent(props) {
@@ -18,17 +45,11 @@ function ComplexFunctionalComponent(props) {
     
     useEffect(() => {
         // do something
+        setSomeState("someNewState")
         return () => {
             // do some cleanup
         }
     }, [/*dependencies*/])
-
-    const someFunction = useCallback(
-        () => {
-            // do something
-        },
-        [props.a, props.b] // <- array of dependencies
-    )
 
     return <span>{this.state.someState}</span>
 }
@@ -85,6 +106,6 @@ export function OuterComponent(props) {
 
 const InnerComponent = React.memo((props) => {
     const renderCount = useRef(-1)
-    renderCount.current = renderCount.current+1;
-    return <button onClick={props.functionProp}>Times rendered: {renderCount.current}</button>
+    renderCount.current = renderCount.current + 1;
+    return <button onClick={props.functionProp}>Inner component rendered: {renderCount.current}</button>
 })
