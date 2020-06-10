@@ -17,7 +17,10 @@ import outer from "./assets/outer.png"
 import outerMutating from "./assets/outerMutating.png"
 import reuseStatefulLogic from "./assets/reuseStateLogic.png"
 import noReuseStatefulLogic from "./assets/unReusableStateLogic.png"
-//import outerMutating from "./assets/outerMutating.png"
+import useStateImg from "./assets/useState.png"
+import useEffectImg from "./assets/useEffect.png"
+import useContextImg from "./assets/useContext.png"
+import useMemoizedImg from "./assets/useMemoized.png"
 import useArrowCounter from "./useArrowCounter";
 import {Counter, OuterMutatingComponent, OuterComponent} from "./examples"
 
@@ -57,34 +60,46 @@ const slideSet = [{
 { 
     title: "How - Local state",
     content: (
+        <>
+        <img className="subHeaderImg" src={useStateImg}/>
         <ComparisonContent
         case={<img src={localState} />}
         counterCase={<div className={"buttonWrapper"}><Counter/></div>}
         />
+        </>
     )
 },
 {
     title: "How - Effects",
     content: (
+        <>
+        <img className="subHeaderImg" src={useEffectImg}/>
         <img className="content-onlyImage" src={preCustomHook}/>
+        </>
     )
 },
 {
     title: "How - Context",
     content: (
+        <>
+        <img className="subHeaderImg" src={useContextImg}/>
         <ComparisonContent
         case={<img src={contextProvider}/>}
         counterCase={<img src={contextConsumer}/>}
         />
+        </>
     )
 },
 {
     title: "How - Memoized values",
     content: (
+        <>
+        <img className="subHeaderImg" src={useMemoizedImg}/>
         <ComparisonContent
         case={<><img src={outerMutating}/><OuterMutatingComponent/></>}
         counterCase={<><img src={outer}/><OuterComponent/></>}
         />
+        </>
     )
 },
 {

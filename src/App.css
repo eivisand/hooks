@@ -47,3 +47,7 @@
   max-width: 70vw;
   max-height: 60vh;
 }
+.subHeaderImg {
+  margin-bottom: 4vh;
+  margin-top: -3vh;
+}

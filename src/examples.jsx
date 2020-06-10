@@ -21,8 +21,29 @@ class ComplexComponent extends React.Component {
     }
 }
 
+// function useAllHooks(){
+
+//     const [state, setState] = useState(initialState);
+
+//     useEffect(() => {}, []);
+
+//     const context = useContext(MyContext);
+
+//     const memoizedCallback = useCallback(
+//         () => {
+//             doSomething(a, b);
+//         },
+//         [a, b],
+//     );
+//     const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+// }
+
+
 function useCommonPattern(initialState) {
     const [someState, setSomeState] = useState("someState");
+
+    const [state, setState] = useState(initialState);
     
     useEffect(() => {
         // do something
